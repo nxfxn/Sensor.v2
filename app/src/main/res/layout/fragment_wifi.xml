@@ -1,0 +1,262 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container_wififrag"
+    tools:context="com.example.neildafarrar.sensorv2.Wifi">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/wchart"
+                android:layout_width="match_parent"
+                android:layout_height="325dp">
+            </com.github.mikephil.charting.charts.LineChart>
+
+            <TextView
+                android:text="Signal Strength(-dBm) Vs Time"
+                android:textSize="10dp"
+                android:textAlignment="center"
+                android:background="#fafafa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/xaxis_label" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#FFFFFF"
+                            android:layout_margin="1dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="WiFi Name"
+                                android:textStyle="bold"
+                                android:layout_weight=".5"
+                                android:textSize="18dp"
+                                android:padding="5dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/w_name"
+                                android:textSize="18dp"
+                                android:padding="5dp"
+                                android:textStyle="bold"
+                                android:layout_weight="1.5" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fafafa"
+                            android:layout_margin="1dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="WiFi Strength"
+                                android:textSize="18dp"
+                                android:padding="5dp"
+                                android:textStyle="bold"
+                                android:layout_weight=".5" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/w_strength"
+                                android:textSize="18dp"
+                                android:padding="5dp"
+                                android:textStyle="bold"
+                                android:layout_weight="1.5" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#FFFFFF"
+                            android:layout_margin="1dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Max. Speed"
+                                android:textSize="18dp"
+                                android:padding="5dp"
+                                android:textStyle="bold"
+                                android:layout_weight=".5" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="18dp"
+                                android:padding="5dp"
+                                android:id="@+id/w_maxspeed"
+                                android:textStyle="bold"
+                                android:layout_weight="1.5" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fafafa"
+                            android:layout_margin="1dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="18dp"
+                                android:padding="5dp"
+                                android:text="IP Address"
+                                android:textStyle="bold"
+                                android:layout_weight=".5" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="18dp"
+                                android:padding="5dp"
+                                android:id="@+id/w_ipaddress"
+                                android:textStyle="bold"
+                                android:layout_weight="1.5" />
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#FFFFFF"
+                            android:layout_margin="1dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Gateway IP"
+                                android:textSize="18dp"
+                                android:padding="5dp"
+                                android:textStyle="bold"
+                                android:layout_weight=".5" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/w_gatewayip"
+                                android:textSize="18dp"
+                                android:padding="5dp"
+                                android:textStyle="bold"
+                                android:layout_weight="1.5" />
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fafafa"
+                            android:layout_margin="1dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="18dp"
+                                android:padding="5dp"
+                                android:text="DHCP IP"
+                                android:textStyle="bold"
+                                android:layout_weight=".5" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="18dp"
+                                android:padding="5dp"
+                                android:id="@+id/w_dhcpip"
+                                android:textStyle="bold"
+                                android:layout_weight="1.5" />
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#FFFFFF"
+                            android:layout_margin="1dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="18dp"
+                                android:padding="5dp"
+                                android:text="DNS 1"
+                                android:textStyle="bold"
+                                android:layout_weight=".5" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="18dp"
+                                android:padding="5dp"
+                                android:id="@+id/w_dns1ip"
+                                android:textStyle="bold"
+                                android:layout_weight="1.5" />
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fafafa"
+                            android:layout_margin="1dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="18dp"
+                                android:padding="5dp"
+                                android:text="DNS 2"
+                                android:textStyle="bold"
+                                android:layout_weight=".5" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/w_dns2ip"
+                                android:textSize="18dp"
+                                android:padding="5dp"
+                                android:textStyle="bold"
+                                android:layout_weight="1.5" />
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fafafa"
+                            android:layout_margin="1dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="18dp"
+                                android:padding="5dp"
+                                android:text="MAC Address"
+                                android:textStyle="bold"
+                                android:layout_weight=".5" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/w_mac"
+                                android:textSize="18dp"
+                                android:padding="5dp"
+                                android:textStyle="bold"
+                                android:layout_weight="1.5" />
+                        </TableRow>
+
+                    </TableLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

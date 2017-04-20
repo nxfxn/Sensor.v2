@@ -1,0 +1,220 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container_mobilefrag"
+    tools:context="com.example.neildafarrar.sensorv2.Mobile">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/mchart"
+                    android:layout_width="match_parent"
+                    android:layout_height="310dp"
+                    android:textDirection="firstStrongRtl"
+                    android:textAlignment="gravity">
+                </com.github.mikephil.charting.charts.LineChart>
+
+
+            <TextView
+                android:text="Signal Strength(-dBm) Vs Time"
+                android:textSize="10dp"
+                android:textAlignment="center"
+                android:background="#fafafa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/xaxis_label" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:layout_margin="1dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Mobile Operator"
+                            android:textStyle="bold"
+                            android:layout_weight=".5"
+                            android:textSize="18dp"
+                            android:padding="5dp"
+                            android:id="@+id/textView" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/moperator"
+                            android:textSize="18dp"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+                            android:layout_weight="1.5" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#fafafa"
+                        android:layout_margin="1dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Network Type"
+                        android:textSize="18dp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:layout_weight=".5" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/mtype"
+                        android:textSize="18dp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:layout_weight="1.5" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFFFFF"
+                        android:layout_margin="1dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Network Strength"
+                            android:textSize="18dp"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+                            android:layout_weight=".5" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="18dp"
+                            android:padding="5dp"
+                            android:id="@+id/mstrength"
+                            android:textStyle="bold"
+                            android:layout_weight="1.5" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#fafafa"
+                        android:layout_margin="1dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="18dp"
+                            android:padding="5dp"
+                            android:text="Data State"
+                            android:textStyle="bold"
+                            android:layout_weight=".5" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="18dp"
+                            android:padding="5dp"
+                            android:id="@+id/mdata_state"
+                            android:textStyle="bold"
+                            android:layout_weight="1.5" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFFFFF"
+                        android:layout_margin="1dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Data Activity"
+                            android:textSize="18dp"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+                            android:layout_weight=".5" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/mdata_activity"
+                            android:textSize="18dp"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+                            android:layout_weight="1.5" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#fafafa"
+                        android:layout_margin="1dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="18dp"
+                            android:padding="5dp"
+                            android:text="Country Code"
+                            android:textStyle="bold"
+                            android:layout_weight=".5" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="18dp"
+                            android:padding="5dp"
+                            android:id="@+id/mcountry_code"
+                            android:textStyle="bold"
+                            android:layout_weight="1.5" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#fafafa"
+                        android:layout_margin="1dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="18dp"
+                        android:padding="5dp"
+                        android:text="Roaming"
+                        android:textStyle="bold"
+                        android:layout_weight=".5" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/mroam_state"
+                        android:textSize="18dp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:layout_weight="1.5" />
+                </TableRow>
+
+                </TableLayout>
+
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
